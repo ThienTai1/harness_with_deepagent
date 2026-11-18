@@ -1,14 +1,35 @@
-# Python-generated files
+# Môi trường ảo (Virtual Environments) của uv
+.venv/
+venv/
+env/
+
+# Cache và file biên dịch của Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+
+# Các file phân phối / build package
 build/
 dist/
-wheels/
-*.egg-info
+*.egg-info/
+.eggs/
 
-# Virtual environments
-.venv
+# Cache của các công cụ kiểm tra/test (nếu có dùng kèm)
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
 
-
+# Biến môi trường & secrets (Rất quan trọng)
 .env
+.env.local
+.env.*.local
+
+# Cấu hình IDE & Hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 
