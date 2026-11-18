@@ -1,0 +1,15 @@
+[project]
+name = "test-deepagent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "deepagents>=0.7.34",
+    "langchain>=1.4.9",
+    "langchain-core>=1.7.6",
+    "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.7.4",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.3",
+]
