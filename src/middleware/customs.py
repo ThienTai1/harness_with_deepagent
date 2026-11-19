@@ -1,6 +1,16 @@
-from deepagents.backend import StateBackend
-from deepageents.middleware import SummarizationMiddleware
+"""Custom middleware: summarization of the conversation history.
 
-backend = StateBackend()
+`SummarizationMiddleware(model, backend=...)` summarizes older messages
+once the context window fills, keeping the agent focused on the recent
+turns. The backend persists evicted history to `/conversation_history/...`
+so nothing is lost.
+"""
 
-custom_summarization = SummarizationMiddleware()
+from deepagents.middleware import SummarizationMiddleware
+
+from src.agents.llm import model
+from src.middleware.backend import DEFAULT_BACKEND
+
+custom_summarization = SummarizationMiddleware(model, backend=DEFAULT_BACKEND)
+
+__all__ = ["custom_summarization"]
